@@ -1,0 +1,68 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+.aboutSection {
+  padding: 6rem 0;
+  background-color: var(--background);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.aboutContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  padding: 4rem 3rem;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.sectionText {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .aboutContent {
+    padding: 2.5rem 1.5rem;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}

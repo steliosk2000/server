@@ -1,0 +1,185 @@
+.mainContent {
+  flex: 1;
+}
+
+.aboutSection {
+  padding: 6rem 0;
+  background-color: var(--background);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.aboutContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  padding: 4rem 3rem;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.sectionText {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.contactSection {
+  padding: 6rem 0;
+  background-color: var(--surface);
+  position: relative;
+  border-top: 1px solid var(--border);
+}
+
+.benefitsSection {
+  padding: 6rem 0;
+  background-color: var(--surface);
+}
+
+.benefitsHeader, .processHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefitCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.benefitCard h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.benefitCard p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.processSection {
+  padding: 6rem 0;
+  background-color: var(--background);
+  border-top: 1px solid var(--border);
+}
+
+.processSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.processStep {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.processStep h3 {
+  font-size: 1.4rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.processStep p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.contactHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+@media (max-width: 768px) {
+  .aboutSection,
+  .contactSection {
+    padding: 4rem 0;
+  }
+  .aboutContent {
+    padding: 2.5rem 1.5rem;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection,
+  .contactSection {
+    padding: 3rem 0;
+  }
+  .aboutContent {
+    padding: 2rem 1rem;
+  }
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+  .sectionText {
+    font-size: 1rem;
+  }
+}

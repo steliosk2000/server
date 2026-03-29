@@ -1,0 +1,239 @@
+.serviceDetail {
+  min-height: 100vh;
+  padding-top: 80px; /* Offset for header */
+}
+
+.heroSection {
+  background-color: var(--surface);
+  padding: 5rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.iconWrapper {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  padding: 1.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contentSection {
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+}
+
+.mainInfo h2 {
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.mainInfo p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.featuresTitle {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.featuresList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.featuresList li {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricingCard {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  text-align: center;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.pricingCard h3 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.pricingInfo {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  display: block;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.ctaBtn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.backLinkWrapper {
+  margin-top: 4rem;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+
+.backBtn {
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.backBtn:hover {
+  color: var(--primary);
+}
+
+.notFound {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding-top: 80px;
+}
+
+.quoteSection {
+  margin-top: 6rem;
+  padding-top: 5rem;
+  border-top: 1px dashed var(--border);
+  text-align: center;
+}
+
+.quoteTitle {
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.quoteSubtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .featuresList {
+    grid-template-columns: 1fr;
+  }
+  .pricingCard {
+    position: static;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 4rem 0;
+  }
+  .contentSection {
+    padding: 4rem 0;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .quoteSection {
+    margin-top: 4rem;
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 3rem 0;
+  }
+  .iconWrapper {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .mainInfo h2 {
+    font-size: 1.75rem;
+  }
+  .mainInfo p {
+    font-size: 1rem;
+  }
+  .pricingCard {
+    padding: 1.5rem;
+  }
+  .quoteTitle {
+    font-size: 1.75rem;
+  }
+  .quoteSubtitle {
+    font-size: 1rem;
+  }
+}
