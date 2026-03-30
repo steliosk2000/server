@@ -5,6 +5,9 @@ import { FaLaptopCode, FaMobileAlt, FaSearch, FaCameraRetro, FaChartLine, FaPenN
 import QuoteForm from '../components/QuoteForm/QuoteForm';
 import styles from './ServiceDetail.module.css';
 import { API_BASE_URL } from '../utils/api';
+import SEOHead from '../seo/SEOHead';
+import ServiceSchema from '../seo/ServiceSchema';
+import BreadcrumbSchema from '../seo/BreadcrumbSchema';
 const iconMap = {
   FaLaptopCode: <FaLaptopCode size={40} />,
   FaMobileAlt: <FaMobileAlt size={40} />,
@@ -47,8 +50,23 @@ const ServiceDetail = () => {
     );
   }
 
+  const breadcrumbs = [
+    { name: 'Αρχική', url: 'https://coderastudio.gr/' },
+    { name: 'Υπηρεσίες', url: 'https://coderastudio.gr/services' },
+    { name: service.title, url: `https://coderastudio.gr/services/${service.id}` },
+  ];
+
   return (
     <main className={styles.serviceDetail}>
+      <SEOHead
+        title={`${service.title} στην Κρήτη`}
+        description={`${service.shortDescription} — Επαγγελματική κατασκευή από την Codera Studio για επιχειρήσεις στα Χανιά, Ηράκλειο και σε όλη την Κρήτη. Από ${service.pricing}€.`}
+        keywords={`${service.title} Κρήτη, ${service.title} Χανιά, ${service.title} Ηράκλειο, web design Κρήτη, Codera Studio`}
+        canonical={`https://coderastudio.gr/services/${service.id}`}
+      />
+      <ServiceSchema service={service} />
+      <BreadcrumbSchema items={breadcrumbs} />
+
       <div className={styles.heroSection}>
         <div className={styles.container}>
           <div className={styles.iconWrapper}>

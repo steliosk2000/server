@@ -2,6 +2,10 @@ import { motion } from 'framer-motion';
 import Hero from '../components/Hero/Hero';
 import ContactForm from '../components/ContactForm/ContactForm';
 import styles from './Home.module.css';
+import SEOHead from '../seo/SEOHead';
+import LocalBusinessSchema from '../seo/LocalBusinessSchema';
+import WebSiteSchema from '../seo/WebSiteSchema';
+
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -44,8 +48,18 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEOHead
+        title="Κατασκευή Ιστοσελίδων Κρήτη"
+        description="Κατασκευή ιστοσελίδων, e-shop και ψηφιακού QR μενού στην Κρήτη. Εξειδικευόμαστε σε ιστοσελίδες ξενοδοχείων, ηλεκτρονικά καταστήματα και ψηφιακά μενού για εστιατόρια στα Χανιά και το Ηράκλειο."
+        keywords="κατασκευή ιστοσελίδων Κρήτη, κατασκευή eshop Κρήτη, κατασκευή eshop Χανιά, κατασκευή eshop Ηράκλειο, ιστοσελίδα ξενοδοχείου Κρήτη, QR menu Κρήτη, web design Χανιά, web design Ηράκλειο, κατασκευή ιστοσελίδων Χανιά"
+        canonical="https://coderastudio.gr/"
+      />
+      <LocalBusinessSchema />
+      <WebSiteSchema />
+
       <Hero />
-      
+
+
       <section className={styles.benefitsSection} style={{ overflow: 'hidden' }}>
         <motion.div 
           className={styles.container}

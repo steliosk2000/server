@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../../components/Admin/Admin.module.css';
 import { API_BASE_URL } from '../../utils/api';
+import SEOHead from '../../seo/SEOHead';
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -32,7 +34,9 @@ const Login = () => {
 
   return (
     <div className={styles.loginContainer}>
+      <SEOHead title="Admin Login" noIndex={true} />
       <form onSubmit={handleLogin} className={styles.loginForm}>
+
         <h2>Admin Login</h2>
         {error && <div className={styles.error}>{error}</div>}
         <div className={styles.inputGroup}>

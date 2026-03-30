@@ -36,7 +36,7 @@ const Hero = () => {
         >
           <motion.div variants={itemVariants} className={styles.badge}>Νέα εποχή στο Web Design</motion.div>
           <motion.h1 variants={itemVariants} className={styles.heading}>
-            Αναβαθμίστε την <span>Επιχείρησή</span> σας στον Ψηφιακό Κόσμο
+            Κατασκευή Ιστοσελίδων στην <span>Κρήτη</span> που Φέρνει Αποτελέσματα
           </motion.h1>
           <motion.p variants={itemVariants} className={styles.description}>
             Εξειδικευμένες λύσεις κατασκευής ιστοσελίδων, e-shop και δημιουργικού σχεδιασμού.
