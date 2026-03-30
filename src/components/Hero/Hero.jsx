@@ -15,9 +15,9 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
+  visible: {
+    opacity: 1,
+    y: 0,
     transition: { type: 'spring', stiffness: 100, damping: 15 } // Snappy modern spring
   }
 };
@@ -28,13 +28,13 @@ const Hero = () => {
   return (
     <section className={styles.hero} id="home">
       <div className={styles.container}>
-        <motion.div 
+        <motion.div
           className={styles.content}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className={styles.badge}>Νέα εποχή στο Digital Marketing</motion.div>
+          <motion.div variants={itemVariants} className={styles.badge}>Νέα εποχή στο Web Design</motion.div>
           <motion.h1 variants={itemVariants} className={styles.heading}>
             Αναβαθμίστε την <span>Επιχείρησή</span> σας στον Ψηφιακό Κόσμο
           </motion.h1>
@@ -43,8 +43,8 @@ const Hero = () => {
             Ελάτε να χτίσουμε μαζί την ψηφιακή σας ταυτότητα από το μηδέν, με σύγχρονο design και άριστη λειτουργικότητα.
           </motion.p>
           <motion.div variants={itemVariants} className={styles.actions}>
-            <motion.a 
-              href="/services" 
+            <motion.a
+              href="/services"
               className={styles.primaryBtn}
               onClick={(e) => { e.preventDefault(); navigate('/services'); }}
               whileHover={{ scale: 1.05 }}
@@ -53,8 +53,8 @@ const Hero = () => {
             >
               Οι Υπηρεσίες μας
             </motion.a>
-            <motion.a 
-              href="#contact" 
+            <motion.a
+              href="#contact"
               className={styles.secondaryBtn}
               onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
               whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.1)' }}
@@ -66,17 +66,17 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-      
+
       {/* Decorative gradient orb */}
-      <motion.div 
+      <motion.div
         className={styles.glowOrb}
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: 1, 
+        animate={{
+          opacity: 1,
           scale: 1,
           y: [0, -30, 0]
         }}
-        transition={{ 
+        transition={{
           opacity: { duration: 1.5, delay: 0.5 },
           scale: { duration: 1.5, delay: 0.5 },
           y: { duration: 6, repeat: Infinity, ease: 'easeInOut' }
